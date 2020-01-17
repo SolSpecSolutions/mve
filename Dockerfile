@@ -12,5 +12,7 @@ RUN apk add --no-cache \
         mesa-dev \
     && cd /mve \
     && mkdir bin \
-    && make all
+    && make all \
+    && rm apps/Makefile \
+    && cp -r apps/* /usr/bin
 
